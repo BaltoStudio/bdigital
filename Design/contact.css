@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* RESET GÉNÉRAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- HEADER --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2F2E2B;
+  padding: 0.347vw 3.722vw 0 2.083vw; /* 5px 140px 0 30px */
+  max-width: 100vw;
+}
+
+header input[type="checkbox"] {
+  display: none;
+}
+
+.logo img {
+  height: 9.028vw; /* 130px */
+  max-height: 9.028vw;
+}
+
+/* --- NAVIGATION --- */
+nav {
+  margin-top: -1.389vw; /* -20px */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.694vw; /* 10px */
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.458vw; /* 21px */
+  letter-spacing: -0.069vw;
+  color: #F1EEE9;
+  font-weight: 300;
+  padding: 0 1.389vw; /* 0 20px */
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #C4B295;
+}
+
+/* === VERSION DESKTOP === */
+.menu-icon {
+  display: none; /* le burger n’apparaît pas */
+}
+
+nav {
+  position: static;
+  transform: none;
+  height: auto;
+  width: auto;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* --- CONTENU --- */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #F1EEE9;
+  color: #2F2E2B;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1100px;
+  margin-top: 30px;
+  margin-bottom: 90px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-family: "Anton";
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #2F2E2B;
+}
+
+h1 span {
+  color: #C4B295;
+  font-family: "Poppins";
+  font-size: 20vw;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 70px;
+  gap: 40px;
+}
+
+.contact-info div {
+  flex: 1 1 250px;
+}
+
+.contact-info h3 {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #5a5a5a;
+}
+
+.contact-info p,
+.contact-info a {
+  font-size: 1.05rem;
+  color: #2e2e2e;
+  text-decoration: none;
+}
+
+.socials a {
+  margin-right: 15px;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+}
+
+.socials a:hover {
+  opacity: 0.7;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border: 1px solid #b8b8b8;
+  border-radius: 10px;
+  background-color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #2e2e2e;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #2e2e2e;
+}
+
+form textarea {
+  grid-column: 1 / -1;
+  min-height: 160px;
+  resize: none;
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 15px 50px;
+  border: 1px solid #2e2e2e;
+  border-radius: 40px;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2e2e2e;
+  cursor: pointer;
+  justify-self: end;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #2e2e2e;
+  color: #fff;
+}
+
+/* --- MENU BURGER --- */
+.menu-icon {
+  display: none; /* caché par défaut */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 35px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: #F1EEE9;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animation croix quand le menu est ouvert */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(7.5px, -7.5px);
+}
+
+/* === VERSION MOBILE === */
+@media (max-width: 1280px) {
+  header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+
+  .menu-icon {
+    display: flex;
+    position: static;
+    margin-right: 40px;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 260px;
+    background: #2F2E2B;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+  }
+
+  #menu-toggle:checked ~ nav {
+    transform: translateX(0);
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  nav a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .menu-icon {
+    margin-right: 15px; /* au lieu de 40px */
+  }
+}
+
+/* --- VERSION MOBILE PETITE --- */
+@media (max-width: 600px) {
+  
+  .logo img {
+    height: 12.028vw; /* 130px */
+    max-height: 12.028vw;
+  }
+  
+.logo {
+  margin-left: -2vw;
+}
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-info div {
+    flex: unset;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .contact-info p,
+  .contact-info a {
+    margin-bottom: 3px;
+  }
+
+  button {
+    justify-self: center;
+    width: 100%;
+  }
+}

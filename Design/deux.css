@@ -792,6 +792,19 @@ footer {
       margin-top: 30px;
       font-size: 50px;
     }
+    .strategie .card,
+    .siteweb .card,
+    .newsletters .card,
+    .designgraphique .card {
+      height : 610px;
+      width: 330px;
+    }
+
+    .socialmedia .card {
+      height : 710px;
+      width: 330px;
+    }
+
     }
     
   

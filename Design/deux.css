@@ -353,14 +353,16 @@ footer {
   font-weight: 300;
   letter-spacing: 0.8px;
 
-  display: flex;              /* ✅ pour pouvoir pousser le bouton en bas */
+  display: flex;             
   flex-direction: column;     
   justify-content: space-between; 
 }
 
-.socialmedia .card {
-  width: 400px;
-  height : 560px;
+.socialmedia .cards {
+    display: flex;           
+    justify-content: center; 
+    flex-wrap: wrap;         
+    margin: 0 auto;          
 }
 
 .card-content {
@@ -386,7 +388,7 @@ footer {
 }
 
 .card ul li {
-  margin-bottom: 10px; /* ajuste la valeur selon ton besoin */
+  margin-bottom: 10px; 
 }
 
 .card p {

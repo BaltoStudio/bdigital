@@ -358,11 +358,12 @@ footer {
   justify-content: space-between; 
 }
 
-.socialmedia .card {
-  width: 400px;
-  height : 560px;
-  display : flex;
-  flex-wrap : wrap;
+.socialmedia .cards {
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: flex-start; /* optionnel : garde l'alignement en haut */
+  flex-wrap: wrap;         /* permet de passer à la ligne si plusieurs cartes */
+  gap: 40px;               /* espace entre les cartes */
 }
 
 .card-content {

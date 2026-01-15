@@ -364,6 +364,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 40px 30px;
 }
 
 .card-content {

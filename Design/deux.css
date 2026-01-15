@@ -353,7 +353,7 @@ footer {
   font-weight: 300;
   letter-spacing: 0.8px;
 
-  display: flex;             
+  display: flex;              /* ✅ pour pouvoir pousser le bouton en bas */
   flex-direction: column;     
   justify-content: space-between; 
 }
@@ -361,17 +361,8 @@ footer {
 .socialmedia .card {
   width: 400px;
   height : 560px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 40px 30px;
 }
-.socialmedia .cards {
-  display: flex;             /* active le flex pour le conteneur */
-  justify-content: center;   /* centre horizontalement toutes les cards */
-  flex-wrap: wrap;           /* permet de passer à la ligne si plusieurs cards */
-  gap: 40px;                 /* espace entre les cartes */
-}
+
 .card-content {
   flex-grow: 1;
   display: flex;
@@ -395,7 +386,7 @@ footer {
 }
 
 .card ul li {
-  margin-bottom: 10px; 
+  margin-bottom: 10px; /* ajuste la valeur selon ton besoin */
 }
 
 .card p {

@@ -366,7 +366,12 @@ footer {
   justify-content: center;
   padding: 40px 30px;
 }
-
+.socialmedia .cards {
+  display: flex;             /* active le flex pour le conteneur */
+  justify-content: center;   /* centre horizontalement toutes les cards */
+  flex-wrap: wrap;           /* permet de passer à la ligne si plusieurs cards */
+  gap: 40px;                 /* espace entre les cartes */
+}
 .card-content {
   flex-grow: 1;
   display: flex;
